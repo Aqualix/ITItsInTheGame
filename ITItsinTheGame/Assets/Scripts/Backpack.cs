@@ -11,8 +11,26 @@ public class Backpack : MonoBehaviour
     
     void Start()
     {
-        Coins = 0;
+        if(!PlayerPrefs.HasKey("Coins"))
+        {
+            PlayerPrefs.SetInt("Coins", 0);
+            Load();
+        }
+
+        else
+        {
+            Load();
+        }
+
+        if(Coins < 1)
+        {
+            ScoreText.text = "Coins: 0"; 
+        }
+
+        else
+        {
         ScoreText.text = "Coins: " + Coins;
+        }
     }
     
     void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +39,18 @@ public class Backpack : MonoBehaviour
         {
              Coins = Coins + 1;
             ScoreText.text = "Coins: " + Coins;
+            Save();
       }
+    }
+
+    private void Load()
+    {
+        Coins = PlayerPrefs.GetInt("Coins");
+    }
+    
+    private void Save()
+    {
+        PlayerPrefs.SetInt("Coins", Coins);
     }
 }
     
