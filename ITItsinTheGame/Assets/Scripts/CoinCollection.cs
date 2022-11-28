@@ -10,7 +10,7 @@ public class CoinCollection : MonoBehaviour
     if (collision.gameObject.tag == "Player")
     {
         AS = GetComponent<AudioSource>();
-        AS.Play();
+            AS.Play(0);
         Destroy(gameObject);
     }
  }

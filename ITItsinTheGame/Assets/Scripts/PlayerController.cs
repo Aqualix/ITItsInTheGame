@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
 
     private float moveSpeed = 1.5f;
-    private float jumpForce = 60f;
+    private float jumpForce = 45f;
     bool isJumping = false;
     float moveHorizontal;
     float moveVertical;
