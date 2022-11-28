@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour
     
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        volumeSlider.value = PlayerPrefs.GetFloat ("musicVolume");
     }
 
     private void Save()
