@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rd2D;
+    public Animator animator;
+    float horizontalMove = 0f;
+    float runSpeed = 4f;
+
 
     private float moveSpeed = 1.5f;
     private float jumpForce = 60f;
@@ -22,6 +26,21 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+
+        //Animation
+        horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
+
+        if (!isJumping)
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else 
+        {
+            animator.SetBool("isJumping", true);
+        }
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
     }
     void FixedUpdate()
     {
