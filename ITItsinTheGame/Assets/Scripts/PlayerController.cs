@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rd2D;
     public Animator animator;
+    [SerializeField] private SpriteRenderer SR;
     float horizontalMove = 0f;
     float runSpeed = 4f;
 
@@ -53,6 +54,15 @@ public class PlayerController : MonoBehaviour
         {
             rd2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         } 
+
+        if (moveHorizontal < 0f)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (moveHorizontal > 0f)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

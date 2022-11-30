@@ -1891,6 +1891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 953518081}
+  SR: {fileID: 953518075}
 --- !u!212 &953518075
 SpriteRenderer:
   m_ObjectHideFlags: 0
