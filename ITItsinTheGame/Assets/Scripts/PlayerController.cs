@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer SR;
     float horizontalMove = 0f;
     float runSpeed = 4f;
+    private Animator _animator;
+    private SpriteRenderer _renderer;
 
 
     private float moveSpeed = 1.5f;
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rd2D = gameObject.GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-        else 
+        else
         {
             animator.SetBool("isJumping", true);
         }
@@ -48,21 +52,22 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0f || moveHorizontal < 0f)
         {
             rd2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
-        } 
+        }
 
         if (moveVertical > 0f && !isJumping)
         {
             rd2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
-        } 
+        }
 
-        if (moveHorizontal < 0f)
+        if (moveHorizontal > 0)
         {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
+            _renderer.flipX = false;
         }
-        if (moveHorizontal > 0f)
+        else if (moveHorizontal < 0f)
         {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
+            _renderer.flipX = true;
         }
+    
     }
 
     void OnTriggerEnter2D(Collider2D collision)
