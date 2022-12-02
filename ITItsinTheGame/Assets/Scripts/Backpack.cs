@@ -24,12 +24,12 @@ public class Backpack : MonoBehaviour
 
         if(Coins < 1)
         {
-            ScoreText.text = "Coins: 0"; 
+            ScoreText.text = "0"; 
         }
 
         else
         {
-        ScoreText.text = "Coins: " + Coins;
+        ScoreText.text = "" + Coins;
         }
     }
     
@@ -38,7 +38,7 @@ public class Backpack : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
              Coins = Coins + 1;
-            ScoreText.text = "Coins: " + Coins;
+            ScoreText.text = "" + Coins;
             Save();
       }
     }
