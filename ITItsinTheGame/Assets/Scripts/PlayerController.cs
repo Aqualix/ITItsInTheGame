@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public Canvas doodMenu;
+
     private Rigidbody2D rd2D;
     public Animator animator;
     [SerializeField] private SpriteRenderer SR;
@@ -24,6 +29,11 @@ public class PlayerController : MonoBehaviour
         rd2D = gameObject.GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
+        GameObject tempObject = GameObject.Find("DoodMenu");
+        if (doodMenu != null)
+        {
+            doodMenu = tempObject.GetComponent<Canvas>();
+        }
     }
 
     // Update is called once per frame
@@ -79,9 +89,17 @@ public class PlayerController : MonoBehaviour
     }
         void OnTriggerExit2D(Collider2D collision)
     {
+        //jumping
         if (collision.gameObject.tag == "Platform")
         {
             isJumping = true;
         }
+        //dood gaan van enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+            doodMenu.enabled = true;
+            Debug.Log("hit");
+        }
+
     }
 }
