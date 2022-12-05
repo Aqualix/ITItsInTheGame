@@ -7,8 +7,6 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public Canvas doodMenu;
-
     private Rigidbody2D rd2D;
     public Animator animator;
     [SerializeField] private SpriteRenderer SR;
@@ -16,8 +14,7 @@ public class PlayerController : MonoBehaviour
     float runSpeed = 4f;
     private Animator _animator;
     private SpriteRenderer _renderer;
-
-
+    private Canvas doodMenu;
     private float moveSpeed = 1.5f;
     private float jumpForce = 45f;
     bool isJumping = false;
@@ -29,11 +26,9 @@ public class PlayerController : MonoBehaviour
         rd2D = gameObject.GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
-        GameObject tempObject = GameObject.Find("DoodMenu");
-        if (doodMenu != null)
-        {
-            doodMenu = tempObject.GetComponent<Canvas>();
-        }
+
+        doodMenu = GameObject.Find("DoodMenu").GetComponent<Canvas>();
+        doodMenu.enabled = false;
     }
 
     // Update is called once per frame
@@ -100,6 +95,5 @@ public class PlayerController : MonoBehaviour
             doodMenu.enabled = true;
             Debug.Log("hit");
         }
-
     }
 }
