@@ -74,7 +74,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 105
+=======
+  controlID: 127
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +103,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 141
+=======
+  controlID: 92
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,7 +126,11 @@ MonoBehaviour:
     x: 1224.8
     y: 0
     width: 311.19995
+<<<<<<< HEAD
     height: 730.8
+=======
+    height: 722.8
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
@@ -170,7 +182,11 @@ MonoBehaviour:
     x: 446.4
     y: 0
     width: 778.4
+<<<<<<< HEAD
     height: 288.4
+=======
+    height: 285.19998
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
@@ -273,7 +289,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 91
+=======
+  controlID: 93
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,7 +318,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 92
+=======
+  controlID: 94
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -473,10 +497,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 424.6}
     m_SelectedIDs: debd0000
     m_LastClickedID: 48606
     m_ExpandedIDs: 000000008c620000946200009e620000487e0000b47e0000d4820000debd00002ebe000026bf000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 143}
+    m_SelectedIDs: c2620000
+    m_LastClickedID: 25282
+    m_ExpandedIDs: 00000000aa62000000ca9a3bffffff7f
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,7 +535,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000008c620000
+=======
+    m_ExpandedIDs: 00000000aa620000
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +630,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 507.2
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -632,9 +667,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: e4c00000
       m_LastClickedID: 0
       m_ExpandedIDs: b2ccffffaae1ffffc0e2ffff5ae4ffffceebffff68ecffffaaecfffff2ecffffb4f3fffff6f3ffff50f5ffffc6faffff449d0000d69d00002a9e00003ca60000e0a600000aa70000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2afbffff66610000
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -938,9 +979,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 0.38010532, y: 1.7618313, z: 0.08405465}
     speed: 2
     m_Value: {x: 0.3962775, y: 1.7081165, z: 0.08691368}
+=======
+    m_Target: {x: -1.6348697, y: 0.174104, z: -0.024111688}
+    speed: 2
+    m_Value: {x: -1.6348697, y: 0.174104, z: -0.024111688}
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -991,9 +1038,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 6.639262
     speed: 2
     m_Value: 6.353361
+=======
+    m_Target: 4.2401752
+    speed: 2
+    m_Value: 4.2401752
+>>>>>>> 59d666f25bc009372d571b15b9b84f2012798404
   m_Ortho:
     m_Target: 1
     speed: 2
