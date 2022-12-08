@@ -36,7 +36,7 @@ public class PatrolEnemy : MonoBehaviour
                 {
                     _renderer.flipX = false;
                 }
-                if ( _renderer.flipX == false)
+                else
                 {
                     _renderer.flipX = true;
                 }
@@ -55,6 +55,7 @@ public class PatrolEnemy : MonoBehaviour
             currentPointIndex = 0;
         }
         once = false;
+        
 
     }
 
