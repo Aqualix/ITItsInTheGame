@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Enemy
   - Head
+  - Water
   layers:
   - Default
   - TransparentFX

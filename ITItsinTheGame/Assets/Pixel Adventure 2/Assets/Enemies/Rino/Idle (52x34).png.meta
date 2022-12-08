@@ -134,6 +134,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -141,10 +153,10 @@ TextureImporter:
       name: Idle (52x34)_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +174,10 @@ TextureImporter:
       name: Idle (52x34)_1
       rect:
         serializedVersion: 2
-        x: 52
+        x: 53
         y: 0
-        width: 52
-        height: 34
+        width: 50
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +195,10 @@ TextureImporter:
       name: Idle (52x34)_2
       rect:
         serializedVersion: 2
-        x: 104
+        x: 105
         y: 0
-        width: 52
-        height: 34
+        width: 50
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +216,10 @@ TextureImporter:
       name: Idle (52x34)_3
       rect:
         serializedVersion: 2
-        x: 156
+        x: 157
         y: 0
-        width: 52
-        height: 34
+        width: 50
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +237,10 @@ TextureImporter:
       name: Idle (52x34)_4
       rect:
         serializedVersion: 2
-        x: 208
+        x: 210
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +258,10 @@ TextureImporter:
       name: Idle (52x34)_5
       rect:
         serializedVersion: 2
-        x: 260
+        x: 262
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +279,10 @@ TextureImporter:
       name: Idle (52x34)_6
       rect:
         serializedVersion: 2
-        x: 312
+        x: 314
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +300,10 @@ TextureImporter:
       name: Idle (52x34)_7
       rect:
         serializedVersion: 2
-        x: 364
+        x: 366
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +321,10 @@ TextureImporter:
       name: Idle (52x34)_8
       rect:
         serializedVersion: 2
-        x: 416
+        x: 418
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +342,10 @@ TextureImporter:
       name: Idle (52x34)_9
       rect:
         serializedVersion: 2
-        x: 468
+        x: 470
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +363,10 @@ TextureImporter:
       name: Idle (52x34)_10
       rect:
         serializedVersion: 2
-        x: 520
+        x: 522
         y: 0
-        width: 52
-        height: 34
+        width: 48
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
