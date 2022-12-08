@@ -8,19 +8,39 @@ public class PatrolEnemy : MonoBehaviour
     public Transform[] patrolPoints;
     public float waitTime;
     int currentPointIndex;
+    public Animator animator;
+    private SpriteRenderer _renderer;
 
     bool once;
+
+    private void Start()
+    {
+        _renderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
         if (transform.position != patrolPoints[currentPointIndex].position)
+        {
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+            animator.SetBool("moving", true);
+        }
         else
         {
             if (once == false)
             {
                 once = true;
                 StartCoroutine(Wait());
+                animator.SetBool("moving", false);
+                if (_renderer.flipX == true)
+                {
+                    _renderer.flipX = false;
+                }
+                if ( _renderer.flipX == false)
+                {
+                    _renderer.flipX = true;
+                }
+
             }
         }
     } 

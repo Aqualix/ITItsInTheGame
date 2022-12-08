@@ -1490,8 +1490,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441433437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.48, y: 0.36, z: 0}
-  m_LocalScale: {x: 4.342, y: 4.342, z: 4.342}
+  m_LocalPosition: {x: 5.11, y: 0.66, z: 0}
+  m_LocalScale: {x: 5.2117023, y: 5.2117023, z: 5.2117023}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3630,7 +3630,7 @@ GameObject:
   - component: {fileID: 1082376785}
   - component: {fileID: 1082376784}
   - component: {fileID: 1082376783}
-  - component: {fileID: 1082376786}
+  - component: {fileID: 1082376787}
   m_Layer: 1
   m_Name: PatrolEnemy
   m_TagString: Enemy
@@ -3655,6 +3655,7 @@ MonoBehaviour:
   - {fileID: 1539648987}
   - {fileID: 1429072295}
   waitTime: 1
+  animator: {fileID: 1082376787}
 --- !u!212 &1082376784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3695,8 +3696,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 3863635566180601805, guid: bb22e9cd7a3f50c41aa55c47dd8c2975, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3715,26 +3716,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082376782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 0.07, z: 0}
-  m_LocalScale: {x: 1.4864, y: 1.8686, z: 1}
+  m_LocalPosition: {x: 0.87, y: -0.36, z: 0}
+  m_LocalScale: {x: 5.2679505, y: 5.2341356, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 40521290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1082376786
-BoxCollider:
+--- !u!95 &1082376787
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082376782}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af3a8a49537346d489c29a2b749c82b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1083107107
 GameObject:
   m_ObjectHideFlags: 0
