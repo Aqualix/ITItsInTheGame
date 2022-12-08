@@ -81,6 +81,12 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+        //dood gaan van enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+            doodMenu.enabled = true;
+            Debug.Log("hit");
+        }
     }
         void OnTriggerExit2D(Collider2D collision)
     {
@@ -89,11 +95,6 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
         }
-        //dood gaan van enemy
-        if (collision.gameObject.tag == "Enemy")
-        {
-            doodMenu.enabled = true;
-            Debug.Log("hit");
-        }
+       
     }
 }
