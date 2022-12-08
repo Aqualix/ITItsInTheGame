@@ -85,7 +85,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             doodMenu.enabled = true;
+            Destroy(gameObject);
             Debug.Log("hit");
+        }
+        if (collision.gameObject.tag == "Head") 
+        {
+            Destroy(collision.transform.parent.gameObject) ;
+            Debug.Log("kaas");
         }
     }
         void OnTriggerExit2D(Collider2D collision)
