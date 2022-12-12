@@ -7,7 +7,7 @@ using TMPro;
 public class Backpack : MonoBehaviour
 {
     public TMP_Text ScoreText;
-    public int Coins;
+    public static int Coins;
     
     void Start()
     {
