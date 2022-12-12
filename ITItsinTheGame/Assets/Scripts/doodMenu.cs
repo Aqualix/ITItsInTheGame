@@ -7,7 +7,7 @@ public class doodMenu : MonoBehaviour
 {
     public void Respawn()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void MainMenu()
