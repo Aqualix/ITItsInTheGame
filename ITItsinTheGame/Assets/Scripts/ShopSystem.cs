@@ -21,6 +21,7 @@ public class ShopSystem : MonoBehaviour
     {
         Load();
         Showitem1();
+        purchased = false;
        
     }
 
@@ -56,6 +57,7 @@ public class ShopSystem : MonoBehaviour
                 prijsText.text = "Purchased";
                 Save();
                 scoreText.text = "" + Coins;
+                Load();
             }
         }
     
@@ -64,5 +66,7 @@ public class ShopSystem : MonoBehaviour
     {
         Coins = Coins + 100;
         scoreText.text = "" + Coins;
+        Save();
+        
     }
 }
