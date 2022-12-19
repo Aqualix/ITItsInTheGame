@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     bool isJumping = false;
     float moveHorizontal;
     float moveVertical;
+   public static bool einde;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
         doodMenu = GameObject.Find("DoodMenu").GetComponent<Canvas>();
         doodMenu.enabled = false;
+        einde = false;
     }
 
     // Update is called once per frame
@@ -92,6 +94,11 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.transform.parent.gameObject) ;
             Debug.Log("kaas");
+        }
+
+        if (collision.gameObject.tag == "Einde")
+        {
+            einde = true;
         }
     }
         void OnTriggerExit2D(Collider2D collision)
