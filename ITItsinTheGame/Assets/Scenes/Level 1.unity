@@ -20443,7 +20443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   target: {fileID: 613508613}
-  minimumDistance: 5
+  minimumDistance: 10
   patrolPoints:
   - {fileID: 1104109066}
   - {fileID: 275489876}

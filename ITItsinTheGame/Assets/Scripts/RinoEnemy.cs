@@ -22,7 +22,7 @@ public class RinoEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) < minimumDistance)
+        if (Vector2.Distance(transform.position, target.position) < minimumDistance && transform.position.x > patrolPoints[0].position.x && transform.position.x < patrolPoints[1].position.x && target.position.x > patrolPoints[0].position.x && target.position.x < patrolPoints[1].position.x)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.gameObject.transform.position.x, transform.position.y), (speed * Time.deltaTime) * 1.5f);
             if (target.position.x < transform.position.x)

@@ -3234,7 +3234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   target: {fileID: 953518076}
-  minimumDistance: 5
+  minimumDistance: 10
   patrolPoints:
   - {fileID: 1207820189}
   - {fileID: 1346674920}
@@ -4992,7 +4992,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1366217852}
-  Coins: 0
 --- !u!114 &953518080
 MonoBehaviour:
   m_ObjectHideFlags: 0
