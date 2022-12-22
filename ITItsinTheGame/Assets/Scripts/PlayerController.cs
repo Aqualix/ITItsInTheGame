@@ -20,8 +20,11 @@ public class PlayerController : MonoBehaviour
     bool isJumping = false;
     public static float moveHorizontal;
     float moveVertical;
-   public static bool einde;
-    bool finishGehaald = false;
+    public static bool einde;
+    public static bool finishGehaald = false;
+    public static int level;
+
+
     // Start is called before the first frame update
     void Start()
     {
