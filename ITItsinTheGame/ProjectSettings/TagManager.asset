@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Head
   - Water
+  - Einde
+  - Lijn
   layers:
   - Default
   - TransparentFX

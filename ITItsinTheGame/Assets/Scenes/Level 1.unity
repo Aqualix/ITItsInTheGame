@@ -1068,7 +1068,6 @@ GameObject:
   m_Component:
   - component: {fileID: 47087846}
   - component: {fileID: 47087847}
-  - component: {fileID: 47087848}
   m_Layer: 0
   m_Name: Background (10)
   m_TagString: Untagged
@@ -1143,21 +1142,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &47087848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47087845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06fad524f310c82479d00cab87deacff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PL: {fileID: 0}
-  character: {fileID: 613508604}
-  RB2: {fileID: 613508610}
 --- !u!1 &49913168
 GameObject:
   m_ObjectHideFlags: 0
@@ -23729,9 +23713,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1134697771}
   - component: {fileID: 1134697770}
+  - component: {fileID: 1134697773}
+  - component: {fileID: 1134697772}
   m_Layer: 0
   m_Name: Huisje
-  m_TagString: Untagged
+  m_TagString: Einde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23803,6 +23789,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134697772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134697769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed0dcce28410d244b6217b01bce5678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1134697773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134697769}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.75456446, y: 0.21845138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.93, y: 2.29}
+    newSize: {x: 2.93, y: 2.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16098201, y: 2.7269027}
+  m_EdgeRadius: 0
 --- !u!1 &1137982073
 GameObject:
   m_ObjectHideFlags: 0
@@ -34079,9 +34103,10 @@ GameObject:
   - component: {fileID: 1637959019}
   - component: {fileID: 1637959018}
   - component: {fileID: 1637959017}
+  - component: {fileID: 1637959020}
   m_Layer: 0
   m_Name: Deactivate (1)
-  m_TagString: Untagged
+  m_TagString: Lijn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34192,6 +34217,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1637959020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637959015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fad524f310c82479d00cab87deacff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PL: {fileID: 0}
+  character: {fileID: 0}
+  RB2: {fileID: 0}
 --- !u!1 &1639694555
 GameObject:
   m_ObjectHideFlags: 0

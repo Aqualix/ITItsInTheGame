@@ -18,9 +18,10 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed = 1.5f;
     private float jumpForce = 45f;
     bool isJumping = false;
-    float moveHorizontal;
+    public static float moveHorizontal;
     float moveVertical;
    public static bool einde;
+    bool finishGehaald = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,11 @@ public class PlayerController : MonoBehaviour
 
         //Animation
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
-
+        if (finishGehaald)
+        {
+            moveHorizontal = einde ? 0 : 1;
+            horizontalMove = einde ? 0 : runSpeed;
+        }
         if (!isJumping)
         {
             animator.SetBool("isJumping", false);
@@ -56,7 +61,8 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (moveHorizontal > 0f || moveHorizontal < 0f)
+
+        if (moveHorizontal != 0f)
         {
             rd2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
         }
@@ -99,6 +105,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Einde")
         {
             einde = true;
+        }
+
+        if (collision.gameObject.tag == "Lijn")
+        {
+            finishGehaald = true;
         }
     }
         void OnTriggerExit2D(Collider2D collision)

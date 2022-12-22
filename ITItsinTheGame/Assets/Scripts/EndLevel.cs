@@ -10,6 +10,8 @@ public class EndLevel : MonoBehaviour
     public GameObject character;
     public Rigidbody2D RB2;
     bool einde = PlayerController.einde;
+    float moveHorizontal = PlayerController.moveHorizontal;
+    int i = 0;
     private void Start()
     {
         character = GameObject.Find("Character");
@@ -19,10 +21,11 @@ public class EndLevel : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PL.enabled = false;
-            while (!einde)
+            moveHorizontal = 0;
+            while (i < 5)
             {
-                RB2.AddForce(new Vector2(1.5f, 0));
+                RB2.AddForce(new Vector2(1.5f, 0), ForceMode2D.Impulse);
+                i++;
             }
 
         }
