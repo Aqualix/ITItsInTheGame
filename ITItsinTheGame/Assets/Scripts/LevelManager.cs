@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
     public void Level2()
     {
-        if (level1gehaald = true)
+        if (level1gehaald == true)
         {
 
             level = 2;
@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour
     public void Level3() 
     {
 
-        if (level2gehaald = true)
+        if (level2gehaald == true)
         {
 
             level = 3;
@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Level4() 
     {
-        if (level3gehaald = true)
+        if (level3gehaald == true)
         {
             level = 4;
             SceneManager.LoadScene(5);
@@ -64,7 +64,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Level5() 
     { 
-        if (level4gehaald = true)
+        if (level4gehaald == true)
         {
             level = 5;
             SceneManager.LoadScene(6);
