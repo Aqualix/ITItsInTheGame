@@ -33,25 +33,43 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    public void Level2() 
+    public void Level2()
     {
-        level= 2;
-        SceneManager.LoadScene(3);
+        if (level1gehaald = true)
+        {
+
+            level = 2;
+            SceneManager.LoadScene(3);
+        }
     }
     public void Level3() 
     {
-        level= 3;
-        SceneManager.LoadScene(4);
+
+        if (level2gehaald = true)
+        {
+
+            level = 3;
+            SceneManager.LoadScene(4);
+        }
+        
     }
     public void Level4() 
     {
-        level= 4;
-        SceneManager.LoadScene(5);
+        if (level3gehaald = true)
+        {
+            level = 4;
+            SceneManager.LoadScene(5);
+        }
+        
     }
     public void Level5() 
     { 
-        level= 5;
-        SceneManager.LoadScene(6);
+        if (level4gehaald = true)
+        {
+            level = 5;
+            SceneManager.LoadScene(6);
+        }
+        
     }
 
 }
