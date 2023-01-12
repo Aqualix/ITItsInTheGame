@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public static bool einde;
     public static bool finishGehaald = false;
     public static int level;
+    public GameObject EnemyDestroyEffect;
+
 
 
     // Start is called before the first frame update
@@ -95,12 +97,14 @@ public class PlayerController : MonoBehaviour
         //dood gaan van enemy
         if (collision.gameObject.tag == "Enemy")
         {
+            Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
             doodMenu.enabled = true;
             Destroy(gameObject);
             Debug.Log("hit");
         }
         if (collision.gameObject.tag == "Head") 
         {
+            
             Destroy(collision.transform.parent.gameObject) ;
             Debug.Log("kaas");
         }
