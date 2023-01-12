@@ -10,6 +10,7 @@ public class PatrolEnemy : MonoBehaviour
     int currentPointIndex;
     public Animator animator;
     private SpriteRenderer _renderer;
+    
 
     bool once;
 
@@ -43,20 +44,21 @@ public class PatrolEnemy : MonoBehaviour
 
             }
         }
-    } 
+    }
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(waitTime);
         if (currentPointIndex + 1 < patrolPoints.Length)
         {
             currentPointIndex++;
-        } else 
+        }
+        else
         {
             currentPointIndex = 0;
         }
         once = false;
-        
+
 
     }
-
+   
 }
