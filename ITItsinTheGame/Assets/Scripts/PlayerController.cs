@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public static bool finishGehaald = false;
     public static int level;
     public GameObject EnemyDestroyEffect;
+    public GameObject GreenDestroyEffect;
+    public GameObject GrayDestroyEffect;
 
 
 
@@ -108,9 +110,17 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Head") 
         {
-            
+
+            Instantiate(GreenDestroyEffect, collision.transform.parent.position, Quaternion.identity);
             Destroy(collision.transform.parent.gameObject) ;
-            Debug.Log("kaas");
+            Debug.Log("EnemyDead");
+        }
+        if (collision.gameObject.tag == "Rhinohead")
+        {
+
+            Instantiate(GrayDestroyEffect, collision.transform.parent.position, Quaternion.identity);
+            Destroy(collision.transform.parent.gameObject);
+            Debug.Log("Rhinodead");
         }
 
         if (collision.gameObject.tag == "Einde")

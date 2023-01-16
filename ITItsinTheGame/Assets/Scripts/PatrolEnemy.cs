@@ -10,7 +10,8 @@ public class PatrolEnemy : MonoBehaviour
     int currentPointIndex;
     public Animator animator;
     private SpriteRenderer _renderer;
-    
+   
+
 
     bool once;
 
@@ -57,8 +58,6 @@ public class PatrolEnemy : MonoBehaviour
             currentPointIndex = 0;
         }
         once = false;
-
-
     }
-   
+    
 }
