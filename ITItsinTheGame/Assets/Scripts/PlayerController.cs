@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _renderer;
     private Canvas doodMenu;
+    private Canvas winMenu;
     private float moveSpeed = 1.5f;
     private float jumpForce = 45f;
     bool isJumping = false;
@@ -37,6 +38,9 @@ public class PlayerController : MonoBehaviour
         doodMenu = GameObject.Find("DoodMenu").GetComponent<Canvas>();
         doodMenu.enabled = false;
         einde = false;
+
+        winMenu = GameObject.Find("WinMenu").GetComponent<Canvas>();
+        winMenu.enabled = false;
     }
 
     // Update is called once per frame
@@ -112,6 +116,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Einde")
         {
             einde = true;
+            winMenu.enabled = true;
+
         }
 
         if (collision.gameObject.tag == "Lijn")
