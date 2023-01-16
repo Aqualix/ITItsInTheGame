@@ -13815,7 +13815,7 @@ GameObject:
   - component: {fileID: 679892367}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Head
+  m_TagString: Rhinohead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16440,7 +16440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &806053514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20730,7 +20730,7 @@ GameObject:
   - component: {fileID: 969036294}
   m_Layer: 0
   m_Name: RinoEnemy
-  m_TagString: Rhinohead
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28922,7 +28922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1373710715
 MonoBehaviour:
   m_ObjectHideFlags: 0
