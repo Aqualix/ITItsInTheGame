@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     public void Level1() 
     {
         level = 1;
+        PlayerController.finishGehaald = false;
         SceneManager.LoadScene(2);
         
     }
@@ -39,6 +40,7 @@ public class LevelManager : MonoBehaviour
         {
 
             level = 2;
+            PlayerController.finishGehaald = false;
             SceneManager.LoadScene(3);
         }
     }
@@ -49,25 +51,8 @@ public class LevelManager : MonoBehaviour
         {
 
             level = 3;
+            PlayerController.finishGehaald = false;
             SceneManager.LoadScene(4);
-        }
-        
-    }
-    public void Level4() 
-    {
-        if (level3gehaald == true)
-        {
-            level = 4;
-            SceneManager.LoadScene(5);
-        }
-        
-    }
-    public void Level5() 
-    { 
-        if (level4gehaald == true)
-        {
-            level = 5;
-            SceneManager.LoadScene(6);
         }
         
     }
