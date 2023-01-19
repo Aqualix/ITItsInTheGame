@@ -12,7 +12,6 @@ public class ExitLevel : MonoBehaviour
         if (collision.gameObject.tag == "Einde")
         {
             einde= true;
-            LevelManager.level1gehaald = true;
             // ruimte voor animatie
 
             SceneManager.LoadScene(1);
