@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     bool unlockedlvl = false;
-    int level = PlayerController.level;
     public static bool level1gehaald = false;
     public static bool level2gehaald = false;
     public static bool level3gehaald = false;
@@ -51,7 +50,7 @@ public class LevelManager : MonoBehaviour
 
     public void Level1() 
     {
-        level = 1;
+        PlayerController.level = 1;
         PlayerController.finishGehaald = false;
         SceneManager.LoadScene(2);
         
@@ -62,7 +61,7 @@ public class LevelManager : MonoBehaviour
         if (level1gehaald == true)
         {
 
-            level = 2;
+            PlayerController.level = 2;
             PlayerController.finishGehaald = false;
             SceneManager.LoadScene(3);
         }
@@ -73,7 +72,7 @@ public class LevelManager : MonoBehaviour
         if (level2gehaald == true)
         {
 
-            level = 3;
+            PlayerController.level = 3;
             PlayerController.finishGehaald = false;
             SceneManager.LoadScene(4);
         }
