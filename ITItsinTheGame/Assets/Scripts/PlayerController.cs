@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _renderer;
     private Canvas doodMenu;
     private Canvas winMenu;
-    private float moveSpeed = 1.5f;
-    private float jumpForce = 45f;
+    public static float moveSpeed = 1.5f;
+    public static float jumpForce = 45f;
     bool isJumping = false;
     public static float moveHorizontal;
     float moveVertical;

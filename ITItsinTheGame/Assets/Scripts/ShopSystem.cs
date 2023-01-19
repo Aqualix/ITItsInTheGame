@@ -12,7 +12,9 @@ public class ShopSystem : MonoBehaviour
     
     public int prijs;
     Boolean purchased = false;
+    Boolean purchased2 = false;
     public TMP_Text prijsText;
+    public TMP_Text prijsText2;
     public TMP_Text scoreText;
     int Coins = Backpack.Coins;
 
@@ -21,7 +23,7 @@ public class ShopSystem : MonoBehaviour
     {
         Load();
         Showitem1();
-        purchased = false;
+        Showitem2();
        
     }
 
@@ -42,7 +44,7 @@ public class ShopSystem : MonoBehaviour
 
     public void Showitem1()
     {
-        prijs = 50;
+        prijs = 100;
         prijsText.text = "" + prijs; 
     }
     public void buyitem1()
@@ -55,12 +57,38 @@ public class ShopSystem : MonoBehaviour
                 PlayerPrefs.SetInt("Coins", Coins);
                 purchased = true;
                 prijsText.text = "Purchased";
+                PlayerController.moveSpeed = 2f;
                 Save();
                 scoreText.text = "" + Coins;
                 Load();
+               
             }
         }
     
+    }
+    public void Showitem2()
+    {
+        prijs = 50;
+        prijsText2.text = "" + prijs;
+    }
+    public void buyitem2()
+    {
+        if (purchased2 == false)
+        {
+            if (prijs < Coins)
+            {
+                Coins = Coins - prijs;
+                PlayerPrefs.SetInt("Coins", Coins);
+                purchased2 = true;
+                prijsText2.text = "Purchased";
+                PlayerController.jumpForce = 60f;
+                Save();
+                scoreText.text = "" + Coins;
+                Load();
+
+            }
+        }
+
     }
     public void coinserbij()
     {

@@ -56,5 +56,11 @@ public class LevelManager : MonoBehaviour
         }
         
     }
+    public void BacktoLevelManager()
+    {
+       
+        SceneManager.LoadScene(1);
+
+    }
 
 }
