@@ -17,6 +17,11 @@ public class ShopSystem : MonoBehaviour
     public TMP_Text prijsText2;
     public TMP_Text scoreText;
     int Coins = Backpack.Coins;
+    public Button turnonitem1;
+    public Button turnoffitem1;
+    public Button turnonitem2;
+    public Button turnoffitem2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +29,17 @@ public class ShopSystem : MonoBehaviour
         Load();
         Showitem1();
         Showitem2();
-       
+        showbuttonsitem1();
+        showbuttonsitem2();
+
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void Save()
     {
@@ -41,7 +49,7 @@ public class ShopSystem : MonoBehaviour
     {
         Coins = PlayerPrefs.GetInt("Coins");
     }
-
+ 
     public void Showitem1()
     {
         prijs = 100;
@@ -61,10 +69,27 @@ public class ShopSystem : MonoBehaviour
                 Save();
                 scoreText.text = "" + Coins;
                 Load();
+                showbuttonsitem1();
                
             }
         }
     
+    }
+    public void showbuttonsitem1()
+    {
+        if(SpeedIsPurchased == true)
+        {
+            turnonitem1.gameObject.SetActive(true);
+            turnoffitem1.gameObject.SetActive(true);
+        }
+    }
+    public void showbuttonsitem2()
+    {
+        if (JumpIsPurchased == true)
+        {
+            turnonitem2.gameObject.SetActive(true);
+            turnoffitem2.gameObject.SetActive(true);
+        }
     }
     public void Showitem2()
     {
@@ -85,9 +110,37 @@ public class ShopSystem : MonoBehaviour
                 Save();
                 scoreText.text = "" + Coins;
                 Load();
+                showbuttonsitem2();
 
             }
         }
+
+    }
+    public void turnitem1off() {
+        
+            PlayerController.moveSpeed = 1.5f;
+        
+
+    }
+    public void turnitem1on()
+    {
+        
+            PlayerController.moveSpeed = 2f;
+        
+
+    }
+    public void turnitem2off()
+    {
+        
+            PlayerController.jumpForce = 45f;
+        
+
+    }
+    public void turnitem2on()
+    {
+       
+            PlayerController.jumpForce = 60f;
+        
 
     }
     public void coinserbij()
