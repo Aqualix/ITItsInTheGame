@@ -13,11 +13,20 @@ public class LevelManager : MonoBehaviour
     public static bool level3gehaald = false;
     public static bool level4gehaald = false;
     public static bool level5gehaald = false;
+    public Button button2;
+    public Button button3;
+    public Color wantedColor;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        button2 = GameObject.Find("Level2").GetComponent<Button>();
+
+        if (level1gehaald == true)
+        {
+            ColorBlock cb = button2.colors;
+            cb.normalColor= wantedColor;
+        }
     }
 
     // Update is called once per frame
