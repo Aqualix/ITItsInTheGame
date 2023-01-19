@@ -11,8 +11,8 @@ public class ShopSystem : MonoBehaviour
 {
     
     public int prijs;
-    Boolean purchased = false;
-    Boolean purchased2 = false;
+    public static Boolean SpeedIsPurchased = false;
+    public static Boolean JumpIsPurchased = false;
     public TMP_Text prijsText;
     public TMP_Text prijsText2;
     public TMP_Text scoreText;
@@ -49,13 +49,13 @@ public class ShopSystem : MonoBehaviour
     }
     public void buyitem1()
     {
-        if (purchased == false)
+        if (SpeedIsPurchased == false)
         {
             if (prijs < Coins)
             {
                 Coins = Coins - prijs;
                 PlayerPrefs.SetInt("Coins", Coins);
-                purchased = true;
+                SpeedIsPurchased = true;
                 prijsText.text = "Purchased";
                 PlayerController.moveSpeed = 2f;
                 Save();
@@ -73,13 +73,13 @@ public class ShopSystem : MonoBehaviour
     }
     public void buyitem2()
     {
-        if (purchased2 == false)
+        if (JumpIsPurchased == false)
         {
             if (prijs < Coins)
             {
                 Coins = Coins - prijs;
                 PlayerPrefs.SetInt("Coins", Coins);
-                purchased2 = true;
+                JumpIsPurchased = true;
                 prijsText2.text = "Purchased";
                 PlayerController.jumpForce = 60f;
                 Save();
