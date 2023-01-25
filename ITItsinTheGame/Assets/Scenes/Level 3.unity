@@ -28512,7 +28512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbad559aaefebd4abe4775ee21cb00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
+  ScoreText: {fileID: 33871291}
 --- !u!61 &1957751631
 BoxCollider2D:
   m_ObjectHideFlags: 0
