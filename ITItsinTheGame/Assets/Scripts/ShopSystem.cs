@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 using System;
-using UnityEditor.Search;
+
 
 public class ShopSystem : MonoBehaviour
 {
