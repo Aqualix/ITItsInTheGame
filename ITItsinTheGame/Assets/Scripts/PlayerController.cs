@@ -132,8 +132,22 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "Lijn")
         {
+            if (level == 1)
+            {
+                LevelManager.level1gehaald = true;
+            }
+
+            if (level == 2)
+            {
+                LevelManager.level2gehaald = true;
+            }
+
+            if (level == 3)
+            {
+                LevelManager.level3gehaald = true;
+            }
+
             finishGehaald = true;
-            LevelManager.level1gehaald = true;
         }
     }
         void OnTriggerExit2D(Collider2D collision)
