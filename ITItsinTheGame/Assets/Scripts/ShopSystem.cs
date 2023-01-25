@@ -31,7 +31,7 @@ public class ShopSystem : MonoBehaviour
         Showitem2();
         showbuttonsitem1();
         showbuttonsitem2();
-
+        scoreText.text = "" + Coins;
 
     }
 
