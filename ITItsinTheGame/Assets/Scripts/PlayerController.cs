@@ -127,6 +127,7 @@ public class PlayerController : MonoBehaviour
         {
             einde = true;
             winMenu.enabled = true;
+            LevelManager.Save();
 
         }
 
