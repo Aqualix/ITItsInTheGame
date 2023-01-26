@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 using System;
-using UnityEditor.Search;
+
 
 public class ShopSystem : MonoBehaviour
 {
@@ -26,12 +26,22 @@ public class ShopSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("SpeedIsPurchased"))
+        {
+            PlayerPrefs.SetInt("SpeedIsPurchased", 0);
+            PlayerPrefs.SetInt("JumpIsPurchased", 0);
+            Load2();
+        }
+        else
+        {
+            Load2();
+        }
         Load();
         Showitem1();
         Showitem2();
         showbuttonsitem1();
         showbuttonsitem2();
-
+        scoreText.text = "" + Coins;
 
     }
 
@@ -67,6 +77,7 @@ public class ShopSystem : MonoBehaviour
                 prijsText.text = "Purchased";
                 PlayerController.moveSpeed = 2f;
                 Save();
+                Save2();
                 scoreText.text = "" + Coins;
                 Load();
                 showbuttonsitem1();
@@ -81,6 +92,8 @@ public class ShopSystem : MonoBehaviour
         {
             turnonitem1.gameObject.SetActive(true);
             turnoffitem1.gameObject.SetActive(true);
+            prijsText.text = "Purchased";
+
         }
     }
     public void showbuttonsitem2()
@@ -89,6 +102,7 @@ public class ShopSystem : MonoBehaviour
         {
             turnonitem2.gameObject.SetActive(true);
             turnoffitem2.gameObject.SetActive(true);
+            prijsText2.text = "Purchased";
         }
     }
     public void Showitem2()
@@ -108,6 +122,7 @@ public class ShopSystem : MonoBehaviour
                 prijsText2.text = "Purchased";
                 PlayerController.jumpForce = 60f;
                 Save();
+                Save2();
                 scoreText.text = "" + Coins;
                 Load();
                 showbuttonsitem2();
@@ -149,5 +164,17 @@ public class ShopSystem : MonoBehaviour
         scoreText.text = "" + Coins;
         Save();
         
+    }
+
+    private void Load2()
+    {
+        SpeedIsPurchased = PlayerPrefs.GetInt("SpeedIsPurchased") == 1 ? true : false;
+        JumpIsPurchased = PlayerPrefs.GetInt("JumpIsPurchased") == 1 ? true : false;
+    }
+
+    private void Save2()
+    {
+        PlayerPrefs.SetInt("SpeedIsPurchased", SpeedIsPurchased ? 1 : 0);
+        PlayerPrefs.SetInt("JumpIsPurchased", JumpIsPurchased ? 1 : 0);
     }
 }

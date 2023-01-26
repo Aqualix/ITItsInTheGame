@@ -8,9 +8,11 @@ public class Backpack : MonoBehaviour
 {
     public TMP_Text ScoreText;
     public static int Coins;
+    public static int coins;
     
     void Start()
     {
+        coins = 0;
         if(!PlayerPrefs.HasKey("Coins"))
         {
             PlayerPrefs.SetInt("Coins", 0);
@@ -22,14 +24,14 @@ public class Backpack : MonoBehaviour
             Load();
         }
 
-        if(Coins < 1)
+        if(coins < 1)
         {
             ScoreText.text = "0"; 
         }
 
         else
         {
-        ScoreText.text = "" + Coins;
+        ScoreText.text = "" + coins;
         }
     }
     
@@ -37,10 +39,15 @@ public class Backpack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Coin")
         {
-             Coins = Coins + 1;
-            ScoreText.text = "" + Coins;
+             coins = coins + 1;
+            ScoreText.text = "" + coins;
+        }
+
+        if (collision.gameObject.tag == "Einde")
+        {
+            Coins = Coins + coins;
             Save();
-      }
+        }
     }
 
     private void Load()

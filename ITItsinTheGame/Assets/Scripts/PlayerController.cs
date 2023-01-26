@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GreenDestroyEffect, collision.transform.parent.position, Quaternion.identity);
+            rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject) ;
             Debug.Log("EnemyDead");
         }
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GrayDestroyEffect, collision.transform.parent.position, Quaternion.identity);
+            rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject);
             Debug.Log("Rhinodead");
         }
@@ -127,13 +129,28 @@ public class PlayerController : MonoBehaviour
         {
             einde = true;
             winMenu.enabled = true;
+            LevelManager.Save();
 
         }
 
         if (collision.gameObject.tag == "Lijn")
         {
+            if (level == 1)
+            {
+                LevelManager.level1gehaald = true;
+            }
+
+            if (level == 2)
+            {
+                LevelManager.level2gehaald = true;
+            }
+
+            if (level == 3)
+            {
+                LevelManager.level3gehaald = true;
+            }
+
             finishGehaald = true;
-            LevelManager.level1gehaald = true;
         }
     }
         void OnTriggerExit2D(Collider2D collision)

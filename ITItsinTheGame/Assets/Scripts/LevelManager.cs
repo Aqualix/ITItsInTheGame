@@ -10,8 +10,6 @@ public class LevelManager : MonoBehaviour
     public static bool level1gehaald = false;
     public static bool level2gehaald = false;
     public static bool level3gehaald = false;
-    public static bool level4gehaald = false;
-    public static bool level5gehaald = false;
     public Button button2;
     public Button button3;
     public Image button2Image;
@@ -24,6 +22,18 @@ public class LevelManager : MonoBehaviour
         button3 = GameObject.Find("Level3").GetComponent<Button>();
         button2Image = GameObject.Find("Image").GetComponent<Image>();
         button3Image = GameObject.Find("Image2").GetComponent<Image>();
+
+        if (!PlayerPrefs.HasKey("level1gehaald"))
+        {
+            PlayerPrefs.SetInt("level1gehaald", 0);
+            PlayerPrefs.SetInt("level2gehaald", 0);
+            PlayerPrefs.SetInt("level3gehaald", 0);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
 
         if (level1gehaald == true)
         {
@@ -85,4 +95,19 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    private void Load()
+    {
+        level1gehaald = PlayerPrefs.GetInt("level1gehaald")==1?true:false;
+        level2gehaald = PlayerPrefs.GetInt("level2gehaald")==1?true:false;
+        level3gehaald = PlayerPrefs.GetInt("level3gehaald")==1?true:false;
+        Debug.Log("load");
+    }
+
+    public static void Save()
+    {
+        PlayerPrefs.SetInt("level1gehaald", level1gehaald ? 1 : 0);
+        PlayerPrefs.SetInt("level2gehaald", level2gehaald ? 1 : 0);
+        PlayerPrefs.SetInt("level3gehaald", level3gehaald ? 1 : 0);
+        Debug.Log("save");
+    }
 }
