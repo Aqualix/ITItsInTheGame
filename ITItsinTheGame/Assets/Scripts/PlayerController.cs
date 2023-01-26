@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour
     public GameObject EnemyDestroyEffect;
     public GameObject GreenDestroyEffect;
     public GameObject GrayDestroyEffect;
-    public AudioSource deathsound;
-    public AudioSource EnemyDeathSound;
 
 
 
@@ -106,7 +104,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
-            deathsound.Play();
             doodMenu.enabled = true;
             Destroy(gameObject);
             Debug.Log("hit");
@@ -115,7 +112,6 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GreenDestroyEffect, collision.transform.parent.position, Quaternion.identity);
-            EnemyDeathSound.Play();
             rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject) ;
             Debug.Log("EnemyDead");
@@ -124,7 +120,6 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GrayDestroyEffect, collision.transform.parent.position, Quaternion.identity);
-            EnemyDeathSound.Play();
             rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject);
             Debug.Log("Rhinodead");
