@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GreenDestroyEffect, collision.transform.parent.position, Quaternion.identity);
+            rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject) ;
             Debug.Log("EnemyDead");
         }
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Instantiate(GrayDestroyEffect, collision.transform.parent.position, Quaternion.identity);
+            rd2D.AddForce(new Vector2(0f, 25), ForceMode2D.Impulse);
             Destroy(collision.transform.parent.gameObject);
             Debug.Log("Rhinodead");
         }
