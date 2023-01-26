@@ -92,6 +92,8 @@ public class ShopSystem : MonoBehaviour
         {
             turnonitem1.gameObject.SetActive(true);
             turnoffitem1.gameObject.SetActive(true);
+            prijsText.text = "Purchased";
+
         }
     }
     public void showbuttonsitem2()
@@ -100,6 +102,7 @@ public class ShopSystem : MonoBehaviour
         {
             turnonitem2.gameObject.SetActive(true);
             turnoffitem2.gameObject.SetActive(true);
+            prijsText2.text = "Purchased";
         }
     }
     public void Showitem2()
